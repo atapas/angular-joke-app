@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
+import { format } from 'date-fns'
 @Component({
   selector: 'app-joke',
   templateUrl: './joke.component.html',
@@ -17,8 +18,7 @@ export class JokeComponent implements OnInit {
 		})  
   }
 
-  getJokerImage() {
-    return '../../assets/images/jackiechan.png';
+  getFormattedDate(input) {
+    return format(new Date(input), 'yyyy-MM-dd')
   }
-
 }

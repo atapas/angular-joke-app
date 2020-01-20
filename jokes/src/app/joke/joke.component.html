@@ -4,7 +4,7 @@
     <mat-card *ngFor="let joke of jokes" style="margin-top:10px;">
         <mat-card-header>
             <mat-card-title>{{joke.name}}</mat-card-title>
-            <mat-card-subtitle>{{joke.createdAt}}</mat-card-subtitle>
+            <mat-card-subtitle>Made on: {{getFormattedDate(joke.createdAt)}}</mat-card-subtitle>
         </mat-card-header>
         <mat-card-content>
             <img style="height:100%;" src="../../assets/images/{{joke.image}}.png" />
