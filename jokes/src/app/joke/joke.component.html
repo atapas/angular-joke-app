@@ -1,1 +1,16 @@
-<p>joke works!</p>
+<div style="padding: 13px;">
+    <mat-spinner *ngIf="jokes.length === 0"></mat-spinner>
+
+    <mat-card *ngFor="let joke of jokes" style="margin-top:10px;">
+        <mat-card-header>
+            <mat-card-title>{{joke.name}}</mat-card-title>
+            <mat-card-subtitle>Made on: {{getFormattedDate(joke.createdAt)}}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+            <img style="height:100%;" src="../../assets/images/{{joke.image}}.png" />
+            <p>
+                {{joke.content}}
+            </p>
+        </mat-card-content>
+    </mat-card>
+</div>

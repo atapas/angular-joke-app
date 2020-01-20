@@ -1,9 +1,15 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ApiService {
 
-  constructor() { }
+  private SERVER_URL = '/api';
+  constructor(private httpClient: HttpClient) { }
+
+  public get(){  
+		return this.httpClient.get(this.SERVER_URL);  
+	}
 }
