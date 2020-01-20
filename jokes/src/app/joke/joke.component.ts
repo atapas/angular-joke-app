@@ -13,7 +13,7 @@ export class JokeComponent implements OnInit {
     console.log('initializing joke component');
     this.apiService.get().subscribe((data: any[])=>{  
 			console.log(data);  
-			this.jokes = data;  
+			this.jokes = data['jokes'];  
 		})  
   }
 
