@@ -17,4 +17,8 @@ export class JokeComponent implements OnInit {
 		})  
   }
 
+  getJokerImage() {
+    return '../../assets/images/jackiechan.png';
+  }
+
 }
